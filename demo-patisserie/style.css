@@ -1,0 +1,821 @@
+/* ========================================
+   RAYA STUDIO - MAISON ÉCLAT
+   Main Website Styles
+======================================== */
+
+
+/* ========================================
+   GOOGLE FONT
+======================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap');
+
+
+/* ========================================
+   VARIABLES
+======================================== */
+
+:root {
+    --cream: #fffaf7;
+    --white: #ffffff;
+    --pink-light: #f8e7e4;
+    --pink: #e8b8b2;
+    --pink-dark: #b87872;
+    --brown: #4b3832;
+    --brown-light: #765c54;
+    --gold: #b89a6a;
+    --border: #ead9d5;
+}
+
+
+/* ========================================
+   RESET
+======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: var(--cream);
+    color: var(--brown);
+    line-height: 1.7;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+button,
+input,
+textarea {
+    font-family: inherit;
+}
+
+
+/* ========================================
+   HEADER
+======================================== */
+
+.header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background: rgba(255, 250, 247, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(234, 217, 213, 0.7);
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: auto;
+    padding: 18px 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 30px;
+    font-weight: 600;
+    color: var(--brown);
+}
+
+.logo span {
+    color: var(--pink-dark);
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.nav-links a {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--brown-light);
+    transition: 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--pink-dark);
+}
+
+.nav-button {
+    background: var(--brown);
+    color: white;
+    padding: 11px 20px;
+    border-radius: 30px;
+    font-size: 12px;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.nav-button:hover {
+    background: var(--pink-dark);
+    transform: translateY(-2px);
+}
+
+
+/* ========================================
+   HERO
+======================================== */
+
+.hero {
+    min-height: 100vh;
+    padding: 150px 8% 80px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+
+    background:
+        radial-gradient(
+            circle at 80% 40%,
+            #f6dfdc 0%,
+            transparent 35%
+        ),
+        var(--cream);
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.hero-subtitle {
+    font-size: 11px;
+    letter-spacing: 4px;
+    font-weight: 600;
+    color: var(--pink-dark);
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(60px, 8vw, 105px);
+    line-height: 0.9;
+    font-weight: 500;
+    color: var(--brown);
+}
+
+.hero h1 span {
+    color: var(--pink-dark);
+    font-style: italic;
+}
+
+.hero-description {
+    max-width: 550px;
+    margin-top: 30px;
+    color: var(--brown-light);
+    font-size: 15px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 35px;
+    flex-wrap: wrap;
+}
+
+.primary-button,
+.secondary-button {
+    display: inline-block;
+    padding: 14px 25px;
+    border-radius: 30px;
+    font-size: 12px;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.primary-button {
+    background: var(--brown);
+    color: white;
+}
+
+.primary-button:hover {
+    background: var(--pink-dark);
+    transform: translateY(-3px);
+}
+
+.secondary-button {
+    border: 1px solid var(--brown);
+    color: var(--brown);
+}
+
+.secondary-button:hover {
+    background: var(--brown);
+    color: white;
+}
+
+
+/* ========================================
+   HERO DECORATION
+======================================== */
+
+.hero-decoration {
+    width: 420px;
+    height: 420px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--pink-light);
+    border-radius: 50%;
+}
+
+.cake-circle {
+    width: 300px;
+    height: 300px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            #ffffff 0%,
+            #f8e7e4 65%,
+            #e8b8b2 100%
+        );
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-shadow: 0 30px 70px rgba(75, 56, 50, 0.15);
+}
+
+.cake-circle span {
+    font-size: 80px;
+    color: var(--gold);
+}
+
+
+/* ========================================
+   SECTIONS
+======================================== */
+
+.section {
+    padding: 110px 8%;
+}
+
+.section-heading {
+    text-align: center;
+    max-width: 650px;
+    margin: 0 auto 60px;
+}
+
+.section-label {
+    font-size: 10px;
+    letter-spacing: 4px;
+    font-weight: 600;
+    color: var(--pink-dark);
+    margin-bottom: 12px;
+}
+
+.section-heading h2,
+.about-content h2,
+.contact-content h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 60px;
+    line-height: 1;
+    font-weight: 500;
+    color: var(--brown);
+    margin-bottom: 20px;
+}
+
+.section-heading p {
+    color: var(--brown-light);
+    font-size: 14px;
+}
+
+
+/* ========================================
+   PRODUCTS
+======================================== */
+
+.creations {
+    background: white;
+}
+
+.products-grid {
+    max-width: 1100px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.product-card {
+    background: var(--cream);
+    border: 1px solid var(--border);
+    transition: 0.3s ease;
+    overflow: hidden;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 50px rgba(75, 56, 50, 0.1);
+}
+.product-image {
+    height: 260px;
+    overflow: hidden;
+    background: var(--pink-light);
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s ease;
+}
+
+.product-card:hover .product-image img {
+    transform: scale(1.08);
+}
+
+.product-info {
+    padding: 25px;
+}
+
+.product-info h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 27px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.product-info p {
+    font-size: 13px;
+    color: var(--brown-light);
+}
+
+
+/* ========================================
+   ABOUT
+======================================== */
+
+.about-section {
+    padding: 120px 8%;
+
+    display: grid;
+    grid-template-columns: 1fr 0.7fr;
+    gap: 100px;
+    align-items: center;
+}
+
+.about-content {
+    max-width: 650px;
+}
+
+.about-content p:not(.section-label) {
+    color: var(--brown-light);
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+.about-content .primary-button {
+    margin-top: 15px;
+}
+
+.about-box {
+    min-height: 350px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    background: var(--pink-light);
+    border: 1px solid var(--border);
+}
+
+.about-icon {
+    font-size: 55px;
+    color: var(--gold);
+    margin-bottom: 20px;
+}
+
+.about-box h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.about-box p {
+    color: var(--brown-light);
+    font-size: 14px;
+    max-width: 250px;
+}
+
+
+/* ========================================
+   GALLERY
+======================================== */
+
+.gallery-section {
+    background: white;
+}
+
+.gallery-grid {
+    max-width: 1100px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-rows: 220px 220px;
+    gap: 15px;
+}
+
+.gallery-item {
+    background:
+        linear-gradient(
+            135deg,
+            #f8e7e4,
+            #fffaf7
+        );
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 65px;
+
+    transition: 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: scale(1.02);
+}
+
+.gallery-item.large {
+    grid-row: span 2;
+}
+
+
+/* ========================================
+   CONTACT
+======================================== */
+
+.contact-section {
+    padding: 120px 8%;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+
+    background: var(--pink-light);
+}
+
+.contact-content {
+    max-width: 550px;
+}
+
+.contact-content > p:not(.section-label) {
+    color: var(--brown-light);
+    margin-bottom: 35px;
+}
+
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-item {
+    display: flex;
+    gap: 15px;
+    align-items: flex-start;
+}
+
+.contact-item > span {
+    font-size: 22px;
+}
+
+.contact-item strong {
+    font-size: 13px;
+}
+
+.contact-item p {
+    font-size: 13px;
+    color: var(--brown-light);
+}
+
+.whatsapp-button {
+    display: inline-block;
+    margin-top: 30px;
+
+    background: var(--brown);
+    color: white;
+
+    padding: 14px 24px;
+    border-radius: 30px;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    transition: 0.3s ease;
+}
+
+.whatsapp-button:hover {
+    background: var(--pink-dark);
+    transform: translateY(-3px);
+}
+
+
+/* ========================================
+   CONTACT FORM
+======================================== */
+
+.contact-form {
+    background: white;
+    padding: 40px;
+
+    box-shadow: 0 20px 60px rgba(75, 56, 50, 0.08);
+}
+
+.contact-form h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 11px;
+    font-weight: 600;
+    margin-bottom: 7px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+
+    border: 1px solid var(--border);
+    background: var(--cream);
+
+    padding: 13px 15px;
+
+    outline: none;
+
+    font-size: 13px;
+
+    transition: 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: var(--pink-dark);
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.submit-button {
+    width: 100%;
+
+    border: none;
+
+    background: var(--brown);
+    color: white;
+
+    padding: 15px;
+
+    cursor: pointer;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    transition: 0.3s ease;
+}
+
+.submit-button:hover {
+    background: var(--pink-dark);
+}
+
+.form-message {
+    margin-top: 15px;
+    font-size: 12px;
+    text-align: center;
+}
+
+
+/* ========================================
+   FOOTER
+======================================== */
+
+.footer {
+    padding: 40px 8%;
+
+    background: var(--brown);
+    color: white;
+
+    text-align: center;
+}
+
+.footer-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.footer-logo span {
+    color: var(--pink);
+}
+
+.footer p {
+    font-size: 11px;
+    opacity: 0.7;
+}
+
+.created-by {
+    margin-top: 10px;
+}
+
+.created-by strong {
+    color: var(--pink);
+}
+
+
+/* ========================================
+   RESPONSIVE DESIGN
+======================================== */
+
+@media (max-width: 900px) {
+
+    .nav-links {
+        display: none;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 140px;
+    }
+
+    .hero-description {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .hero-decoration {
+        width: 330px;
+        height: 330px;
+    }
+
+    .cake-circle {
+        width: 240px;
+        height: 240px;
+    }
+
+    .products-grid {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+    }
+
+    .about-section {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .contact-section {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 220px 220px 220px;
+    }
+
+    .gallery-item.large {
+        grid-row: auto;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .navbar {
+        padding: 15px 20px;
+    }
+
+    .logo {
+        font-size: 25px;
+    }
+
+    .nav-button {
+        display: none;
+    }
+
+    .hero {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .hero h1 {
+        font-size: 60px;
+    }
+
+    .hero-decoration {
+        width: 280px;
+        height: 280px;
+    }
+
+    .cake-circle {
+        width: 200px;
+        height: 200px;
+    }
+
+    .section,
+    .about-section,
+    .contact-section {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .section-heading h2,
+    .about-content h2,
+    .contact-content h2 {
+        font-size: 48px;
+    }
+
+    .contact-form {
+        padding: 25px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(5, 220px);
+    }
+}
+/* ========================================
+   SCROLL ANIMATIONS
+======================================== */
+
+.product-card,
+.about-box,
+.gallery-item,
+.contact-form {
+    opacity: 1;
+    transform: translateY(0);
+    transition:
+        opacity 0.7s ease,
+        transform 0.7s ease;
+}
+
+.product-card.hidden,
+.about-box.hidden,
+.gallery-item.hidden,
+.contact-form.hidden {
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.product-card.show,
+.about-box.show,
+.gallery-item.show,
+.contact-form.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* ========================================
+   ACTIVE NAVIGATION
+======================================== */
+
+.nav-links a.active {
+    color: var(--pink-dark);
+}
